@@ -20,6 +20,18 @@ class Character {
   setAttack(attack) {
     this.attack = attack;
   }
+
+  getStoned() {
+    return this.stoned;
+  }
+
+  setStoned(value) {
+    if (typeof value === 'boolean') {
+      this.stoned = value;
+    } else {
+      throw new Error('stoned should be a boolean value');
+    }
+  }
 }
 
 export default Character;

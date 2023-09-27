@@ -26,3 +26,20 @@ test('should set a new attack value', () => {
   charcter.setAttack(120);
   expect(charcter.attack).toBe(120);
 });
+
+test('getStoned should return the value of stoned', () => {
+  const charcter = new Character();
+
+  expect(charcter.getStoned()).toBe(false);
+  charcter.setStoned(true);
+  expect(charcter.getStoned()).toBe(true);
+});
+
+test('setStoned should set value of stoned', () => {
+  const charcter = new Character();
+
+  charcter.setStoned(true);
+  expect(charcter.getStoned()).toBe(true);
+  charcter.setStoned(false);
+  expect(charcter.getStoned()).toBe(false);
+});
